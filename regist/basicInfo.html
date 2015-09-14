@@ -16,36 +16,11 @@
 	<script type="text/javascript" src="../js/base.js"></script>
 	<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>
 	<script type="text/javascript" src="../js/jQuery.md5.js"></script>
-	<script type="text/javascript" src="../js/getVerifyNumBtn.js"></script>
+	<script type="text/javascript" src="./getVerifyNumBtn.js"></script>
+	<script type="text/javascript" src="./submit.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/public.css" />
   <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
-	<style type="text/css">
-.head_add_input {
-  font-size:13px;
-  border:1px solid #FFE610;
-  padding: 3px;
-  line-height:22px;
-  border-radius:6px;
-  color:#000;
-}
-
-.input {
-  color:#000;
-  font-size:13px;
-  border:none;
-  padding: 3px;
-  line-height:22px;
-  min-width:100px;
-
-}
-
-.input_title {
-	width: 65px;
-  display:inline-block;margin-right:5px;
-
-}
-
-	</style>
+	
 </head>
 <body>
 <form action="http://121.41.98.144/mmUser/register/" id="form1" name="form1" method="post">
@@ -78,54 +53,11 @@
 
   <div class="add-row">
 	   <div class="button_ok_div">
-		     <a href="#" class="button_ok" onclick="return NextStep.save();">下一步</a>
+		     <a href="#" class="button_ok" onclick="return BasicInfo.submit();">下一步</a>
 	  </div>
   </div>
 </div>
 </form>
 
-<script type="text/javascript">
-var NextStep = {
-	order_id : 0,
-
-	save: function() {
-		var phoneNum = $('#phoneNum').val();
-		var pw_1 = $.md5($('#pw_1').val());
-		var pw_2 = $.md5($('#pw_2').val());
-
-		var validNum = $('#validNum').val();
-
-		if(phoneNum == '') {
-			M._alert('请输入手机号');
-			return false;
-		}
-
-		if(pw_1 != pw_2) {
-			M._alert('请核对您的密码');
-			return false;
-		}
-
-		if(validNum =='') {
-			M._alert('请输入验证码');
-			return false;
-		}
-
-		var param = {
-			phoneNum: phoneNum,
-			password: pw_1,
-			verifyNum: validNum,
-		};
-
-		$.post("http://121.41.98.144:80/mmUser/register/", param, function(e){
-			if(0 === Number(e.ret)) {
-				location.href = "/KxfBase/address_manager?order_id="+Address.order_id;
-			}
-		});
-		return false;
-	}
-}
-
-
-</script>
 </body>
 </html>

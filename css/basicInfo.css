@@ -89,3 +89,27 @@ line-height:44px;display:block; font-size:15px;
 	border-radius:6px;
 	color:#FFFFFF;
 }
+
+.head_add_input {
+  font-size:13px;
+  border:1px solid #FFE610;
+  padding: 3px;
+  line-height:22px;
+  border-radius:6px;
+  color:#000;
+}
+
+.input {
+  color:#000;
+  font-size:13px;
+  border:none;
+  padding: 3px;
+  line-height:22px;
+  min-width:100px;
+
+}
+
+.input_title {
+	width: 65px;
+  display:inline-block;margin-right:5px;
+}
