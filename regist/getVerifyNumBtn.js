@@ -1,4 +1,4 @@
-var BasicInfo = {
+var VerifyNum = {
 	getVerifyNum: function() {
 		var wait=60;
 		var phoneNum = $('#phoneNum').val();
