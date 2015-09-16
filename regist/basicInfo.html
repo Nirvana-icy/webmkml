@@ -15,53 +15,94 @@
 	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
 	<script type="text/javascript" src="../js/base.js"></script>
 	<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>
-	<script type="text/javascript" src="./dataPicker.js"></script>
+	<script type="text/javascript" src="./datePicker.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/public.css" />
   <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
 
 </head>
 <body>
-<form action="http://121.41.98.144/mmUser/register/" id="form1" name="form1" method="post">
+<form>
 <div class="head">
-	<span class="head_title">个人信息</span>
+	<span class="head_title">宝宝信息</span>
 </div>
 
 <div class="add_info">
 	<div class="add-row">
 		<span class="input_title">宝宝姓名:</span>
-		<input name="name" id="name" class="input" type="text" value="" placeholder="请输入宝宝的姓名" />
+		<input name="name" id="name" class="input" type="text" value="" placeholder="请填写宝宝的姓名" />
 	</div>
 	<div class="add-row">
 		<span class="input_title">宝宝生日:</span>
-		<form name="dataPicker">
-  		<select name="YYYY" onchange="YYYYDD(this.value)">
-    		<option value="">年</option>
+		<form name="datePicker">
+  		<select id="YYYY" onchange="YYYYDD(this.value)">
+    		<option value=""></option>
   		</select>
-  		<select name="MM" onchange="MMDD(this.value)">
-    		<option value="">月</option>
+  		<select id="MM" onchange="MMDD(this.value)">
+    		<option value=""></option>
   		</select>
-  		<select name="DD">
-    		<option value="">日</option>
+  		<select id="DD">
+    		<option value=""></option>
   		</select>
 		</form>
 	</div>
 
   <div class="add-row">
-		<span class="input_title">确认密码</span>
-		<input name="pw_2" id="pw_2" class="input" type="password" value="" placeholder="请再次输入密码" />
+		<span class="input_title">宝宝阅读量:</span>
+			<label class="small_input_width fr"><input name="readingCount" type="radio" value="" /> 50~200本 </label>
+			<label class="small_input_width fr"><input name="readingCount" type="radio" value="" /> 0~50本 </label>
+			<label class="small_input_width fr"><input name="readingCount" type="radio" value="" /> 500本以上 </label>
+			<label class="small_input_width fr"><input name="readingCount" type="radio" value="" /> 200~500本 </label>
 	</div>
 
   <div class="add-row">
-		<span class="input_title">验证码</span>
-		<input name="validNum" id="validNum" class="input" type="text" value="" placeholder="请输入验证码" />
-    <button class="fr">
-  		<a href="#" class="button_ok" id="getVerifyNumBtn" onclick="return VerifyNum.getVerifyNum();">发送验证码</a>
-  	</span>
+		<span class="input_title">宝宝性别:</span>
+		<label class="small_input_width fr"><input name="gender" type="radio" value="" /> 女 </label>
+		<label class="small_input_width fr"><input name="gender" type="radio" value="" /> 男 </label>
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">我是孩子的:</span>
+		<select id="parentSelect" class="common_ipunt_width">
+			<option value=0>妈妈</option>
+			<option value=1>爸爸</option>
+		</select>
+	</div>
+
+	<div class="add-row">
+		<span style="width:55%">宝宝开始阅读的年龄:</span>
+		<input name="startReadingAge" id="startReadingAge" class="middle_input_width" type="text" value="" placeholder="请填周岁哦" />
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">目前在:</span>
+			<label class="small_input_width"><input name="schoolType" type="radio" value="" /> 幼儿园 </label>
+			<label class="small_input_width"><input name="schoolType" type="radio" value="" /> 小学 </label>
+			<label class="small_input_width"><input name="schoolType" type="radio" value="" /> 家 </label>
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">学校名称</span>
+		<input name="schoolName" id="schoolName" class="input" type="text" value="" placeholder="可填无" />
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">宝宝小名:</span>
+		<input name="nickName" id="nickName" class="input" type="text" value="" placeholder="星星" />
+	</div>
+
+	<div class="add-row">
+		<span >您的每周亲子阅读时间:</span>
+			<br>
+				<label class="two_line_selection"><input name="readingTimePerWeek" type="radio" value="" /> <1小时 </label>
+				<label class="two_line_selection"><input name="readingTimePerWeek" type="radio" value="" /> 1~5小时 </label>
+			</br>
+				<label class="two_line_selection"><input name="readingTimePerWeek" type="radio" value="" /> 5~12小时 </label>
+				<label class="two_line_selection"><input name="readingTimePerWeek" type="radio" value="" /> 12小时以上 </label>
 	</div>
 
   <div class="add-row">
 	   <div class="button_ok_div">
-		     <a href="#" class="button_ok" onclick="return BasicInfo.submit();">下一步</a>
+		     <a href="#" class="button_ok" onclick="return basicInfo.createStudent();">生成孩子阅读方案</a>
 	  </div>
   </div>
 </div>

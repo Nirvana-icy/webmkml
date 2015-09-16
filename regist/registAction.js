@@ -1,4 +1,4 @@
-var BasicInfo = {
+var registAction = {
 	submit: function() {
 		var phoneNum = $('#phoneNum').val();
 		var pw_1 = $.md5($('#pw_1').val());
@@ -29,7 +29,7 @@ var BasicInfo = {
 
 		$.post("http://121.41.98.144:80/mmUser/register/", param, function(e){
 			if(0 === Number(e.ret)) {
-				location.href = "/KxfBase/address_manager?order_id="+Address.order_id;
+				location.href = "/regist.html";
 			}
 		});
 		return false;
