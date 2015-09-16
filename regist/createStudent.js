@@ -2,11 +2,61 @@ var basicInfo = {
 	createStudent: function() {
 		var name = $('#name').val();
 		var birthday = $('#birthday').val();
-		var readingCount = $('#readingCount').val();
-		var gender = $('#gender').val();
     var startReadingAge = $('#startReadingAge').val();
-    var schoolType = $('#schoolType').val();
-    var readingHourPerWeek = $('#readingHourPerWeek').val();
+
+    var readingCount = 0;
+    var readingCountArr = document.getElementsByName("readingCount");
+    for(int i = 1; i <= readingCountArr.length; i++){
+      if (genderRadioArr[i].checked == true) {
+        readingCount = i;
+        break;
+      }
+    }
+    switch (readingCount) {
+      case 1:
+        readingCount = 2;
+        break;
+      case 2:
+        readingCount = 1;
+        break;
+      case 3:
+          readingCount = 4;
+        break;
+      case 4:
+          readingCount = 3;
+        break;
+      default:
+
+    }
+
+    var gender = 0;
+    var genderRadioArr = document.getElementsByName("gender");
+    for(int i = 1; i <= genderRadioArr.length; i++){
+      if (genderRadioArr[i].checked == true) {
+        gender = i;
+        break;
+      }
+    }
+
+    var schoolType = 0;
+    var schoolTypeRadioArr = document.getElementsByName("schoolType");
+
+    for(int i = 1; i <= schoolTypeRadioArr.length; i++){
+      if(schoolTypeRadioArr[i].checked == true) {
+        schoolType = i;
+        break;
+      }
+    }
+
+    var readingHourPerWeek = 0;
+    var readingHourPerWeekArr = document.getElementsByName("readingHourPerWeek");
+
+    for(int i = 1; i <= readingHourPerWeekArr.length; i++){
+      if(readingHourPerWeekArr[i].checked == true) {
+        readingHourPerWeek = i;
+        break;
+      }
+    }
 
     var nickName = $('#nickName').val();
     var schoolName = $('#schoolName').val();
@@ -21,12 +71,12 @@ var basicInfo = {
 			return false;
 		}
 
-		if(readingCount =='') {
+		if(0 == readingCount) {
 			M._alert('请输入宝宝的阅读量');
 			return false;
 		}
 
-    if(gender =='') {
+    if(0 == gender) {
 			M._alert('请输入宝宝性别');
 			return false;
 		}
@@ -36,20 +86,26 @@ var basicInfo = {
 			return false;
 		}
 
-    if(schoolType =='') {
-			M._alert('请选择宝宝目前受教育的阶段');
+    if(0 == schoolType) {
+			M._alert('请选择宝宝目前的受教育阶段');
 			return false;
 		}
 
-    if(readingHourPerWeek =='') {
+    if(0 == readingHourPerWeek) {
 			M._alert('请输入您每周的亲子阅读时间');
 			return false;
 		}
 
 		var param = {
-			phoneNum: phoneNum,
-			password: pw_1,
-			verifyNum: validNum,
+			name: name,
+			birthday: birthday,
+			readingCount: readingCount,
+      gender: gender,
+      startReadingAge: startReadingAge,
+      nickName: nickName,
+      schoolType: schoolType,
+      schoolName: schoolName,
+      readingHourPerWeek: readingHourPerWeek,
 		};
 
 		$.post("http://121.41.98.144:80/mmUser/createStudent/", param, function(e){
