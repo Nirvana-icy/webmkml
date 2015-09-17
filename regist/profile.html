@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
 	<script type="text/javascript" src="../js/base.js"></script>
+  <script type="text/javascript" src="./profile.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../css/public.css" />
   <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
@@ -29,42 +30,42 @@
 
   <div class="add-row">
 		<span class="input_title">昵称</span>
-    <label class="user_info_label" id="nickName">nickName</label>
+    <input class="user_info_input" id="nickName" placeholder="nickName"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">性别</span>
-    <label class="user_info_label" id="gender">gender</label>
+    <input class="user_info_input" id="gender" placeholder="gender"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">手机号</span>
-    <label class="user_info_label" id="phoneNum">phoneNum</label>
+    <input class="user_info_input" id="phoneNum" placeholder="phoneNum"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">宝宝数量</span>
-    <label class="user_info_label" id="babyNum">babyNum</label>
+    <input class="user_info_input" id="babyNum" placeholder="babyNum"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">住宅小区</span>
-    <label class="user_info_label" id="homeLocation">homeLocation</label>
+    <input class="user_info_input" id="homeLocation" placeholder="homeLocation"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">职业</span>
-    <label class="user_info_label" id="career">career</label>
+    <input class="user_info_input" id="career" placeholder="career"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">状态</span>
-    <label class="user_info_label" style="color:#EE3B3B" id="processStatus">processStatus</label>
+    <label class="status_label" style="color:#EE3B3B" id="processStatus">processStatus</label>
 	</div>
 
   <div class="add-row">
 	   <div class="button_ok_div">
-		     <a href="#" class="button_ok" onclick="return completeRegist.submit();">修改资料</a>
+		     <a href="#" class="button_ok" onclick="return profile.Modify();">修改资料</a>
 	  </div>
   </div>
 </div>

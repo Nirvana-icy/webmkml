@@ -125,12 +125,19 @@ line-height:80px;display:block; font-size:15px;
   width:65%;
 }
 
-.user_info_label {
-	color: #ADADAD;
-	font-size: 13px;
-	border:none;
-	line-height:44px;
-	float:right;
+.user_info_input {
+  font-size:13px;
+  border:none;
+  line-height:22px;
+  width:65%;
+	text-align:right;
+}
+
+.status_label {
+  font-size:13px;
+  border:none;
+  line-height:44px;
+  float: right;
 }
 
 .inputSmall {
