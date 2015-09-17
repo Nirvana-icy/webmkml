@@ -53,6 +53,14 @@ padding:0 4%;
 line-height:44px;display:block; font-size:15px;
 }
 
+.add-row-hight {
+position:relative;
+border-bottom:1px solid #ddd;
+overflow:hidden;
+padding:0 4%;
+line-height:80px;display:block; font-size:15px;
+}
+
 .ver{ width:95%; margin:0 auto; overflow:hidden}
 .middle_bod li{ width:100%; border-bottom:1px solid #ddd; position:relative; overflow:hidden;}
 .select{display:block; color:#000; overflow:hidden; padding:0 2.5%; margin-top:0px; position:relative;}
@@ -90,6 +98,16 @@ line-height:44px;display:block; font-size:15px;
 	color:#FFFFFF;
 }
 
+.button_ok_small {
+	display:block;
+	height: 32px;line-height: 32px; width:100%;
+	background:#FA8728;
+	border-radius:6px;
+	color:#FFFFFF;
+	position:absolute;
+	margin-top:10px;
+}
+
 .head_add_input {
   font-size:13px;
   border:1px solid #FFE610;
@@ -105,6 +123,14 @@ line-height:44px;display:block; font-size:15px;
   border:none;
   line-height:22px;
   width:65%;
+}
+
+.user_info_label {
+	color: #ADADAD;
+	font-size: 13px;
+	border:none;
+	line-height:44px;
+	float:right;
 }
 
 .inputSmall {
@@ -142,6 +168,15 @@ line-height:44px;display:block; font-size:15px;
 		position:absolute;
 		left:80%;
 		top: 2px;
+}
+
+.roundImage {
+		width: 60px;
+		height: 60px;
+		position:absolute;
+		left:76%;
+		top: 12px;
+		border-radius:6px;
 }
 
 .verifyBtn {

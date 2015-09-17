@@ -99,9 +99,9 @@ var basicInfo = {
 		var param = {
 			name: name,
 			birthday: birthday,
+			parentType: parentType,
 			readingCount: readingCount,
       gender: gender,
-			parentType: parentType,
       startReadingAge: startReadingAge,
       nickName: nickName,
       schoolType: schoolType,
