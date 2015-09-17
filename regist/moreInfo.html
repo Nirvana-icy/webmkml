@@ -47,13 +47,13 @@
   <div class="add-row">
     <span class="input_title">您的生日:</span>
     <form name="datePicker">
-      <select id="YYYY" onchange="YYYYDD(this.value)">
+      <select id="YYYY" style="margin-right:10px" onchange="YYYYDD(this.value)">
         <option value=""></option>
       </select>
-      <select id="MM" onchange="MMDD(this.value)">
+      <select id="MM" style="margin-right:10px" onchange="MMDD(this.value)">
         <option value=""></option>
       </select>
-      <select id="DD">
+      <select id="DD" style="margin-right:10px">
         <option value=""></option>
       </select>
     </form>
@@ -61,7 +61,7 @@
 
   <div class="add-row">
     <span class="input_title">个人简历:</span>
-    <input name="resume" id="resume" type="textarea" value="" placeholder="您的简介" />
+    <input name="resume" id="resume" type="textarea" rows="3" value="" placeholder="您的简介" />
     <!-- <textarea name="yj" cols="20" rows="5"> -->
   </div>
 
@@ -86,6 +86,5 @@
   </div>
 </div>
 </form>
-
 </body>
 </html>

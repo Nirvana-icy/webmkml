@@ -83,7 +83,7 @@ line-height:44px;display:block; font-size:15px;
 }
 
 .button_ok {
-	 display:block;
+	display:block;
 	height: 40px;line-height: 40px; margin:5px auto; width:100%;
 	background:#FA8728;
 	border-radius:6px;
@@ -142,6 +142,14 @@ line-height:44px;display:block; font-size:15px;
 		position:absolute;
 		left:80%;
 		top: 2px;
+}
+
+.verifyBtn {
+		width: 100px;
+		position:absolute;
+		left:65%;
+		top: -3px;
+		text-align:center;
 }
 
 .two_line_selection {

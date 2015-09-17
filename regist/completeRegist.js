@@ -2,9 +2,25 @@ var images = {
 		localId: [],
 		serverId: []
 };
+
 var completeRegist = {
-	//定义images用来保存选择的本地图片ID，和上传后的服务器图片ID
-	submit: function() {
+	submitBtnPressed: function() {
+		function wxUpload(){
+				wx.uploadImage({
+						localId: images.localId[0], // 需要上传的图片的本地ID，由chooseImage接口获得
+						isShowProgressTips: 1, // 默认为1，显示进度提示
+						success: function (res) {
+								complete.submit(res.serverId);
+						}
+				});
+		}
+		wxUpload();
+		return false;
+	}
+}
+
+var complete = {
+	submit: function(serverImageId) {
 		var nickName = $('#nickName').val();
 		var birthday = $('#YYYY').val()+"-"+$('#MM').val()+"-"+$('#DD').val();
     var gender = 0;
@@ -26,32 +42,13 @@ var completeRegist = {
 			M._alert('请输入您的职业信息.');
 			return false;
 		}
-		    document.getElementById('upload').onclick = function(){
-		        var i = 0, len = images.localId.length;
-		        function wxUpload(){
-		            wx.uploadImage({
-		                localId: images.localId[i], // 需要上传的图片的本地ID，由chooseImage接口获得
-		                isShowProgressTips: 1, // 默认为1，显示进度提示
-		                success: function (res) {
-		                    i++;
-		                    //将上传成功后的serverId保存到serverid
-		                    images.serverId.push(res.serverId);
-		                    if(i < len){
-		                        wxUpload();
-		                    }
-		                }
-		            });
-		        }
-		        wxUpload();
-		    }
-
 		var param = {
 			gender: gender,
 			nickName: nickName,
 			resume: resume,
 			careery: careery,
 			birthday: birthday,
-
+			userImage: serverImageId,
 		};
 
 		$.post("http://121.41.98.144:80/mmUser/userUpdate/", param, function(e){
@@ -65,6 +62,22 @@ var completeRegist = {
 
 var wxSelectImg = {
 	selectImage: function() {
+		wx.config({
+		 debug: true, //调试阶段建议开启
+		//  appId: '<?php echo $signPackage["appId"];?>',
+		//  timestamp: <?php echo $signPackage["timestamp"];?>,
+		//  nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+		//  signature: '<?php echo $signPackage["signature"];?>',
+		 jsApiList: [
+						/*
+						 * 所有要调用的 API 都要加到这个列表中
+						 * 这里以图像接口为例
+						 */
+					 "chooseImage",
+					 "previewImage",
+					 "uploadImage"
+		 ]
+	 });
 		var imageView = document.getElementById('userImageView');
 			wx.ready(function () {
 				// 在这里调用 API
@@ -79,5 +92,5 @@ var wxSelectImg = {
 				}
 	});
 	return false;
-}
+	}
 }

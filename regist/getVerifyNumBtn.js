@@ -11,7 +11,8 @@ var VerifyNum = {
 
 		function time(o) {
 		if (wait === 0) {
-			o.removeAttribute("disabled");
+			// o.removeAttribute("disabled");
+			o.style.backgroundColor="#FA8728";
 			o.text="获取验证码";
 			wait = 60;
 		} else {
@@ -25,7 +26,8 @@ var VerifyNum = {
 						alert("content");
 				});
 			}
-			o.setAttribute("disabled", true);
+			// o.setAttribute("disabled", true);
+			o.style.backgroundColor="#ADADAD";
 			o.text="重新发送(" + wait + ")";
 			wait--;
 			setTimeout(function() {
