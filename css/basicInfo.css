@@ -118,8 +118,15 @@ line-height:44px;display:block; font-size:15px;
 .common_ipunt_width {
   width:65%;
 }
+
 .input_title {
 	width: 30%;
+  display:inline-block;margin-right:5px;
+}
+
+.input_title_red {
+	color:#FF3030;
+	width: 40%;
   display:inline-block;margin-right:5px;
 }
 
@@ -127,6 +134,14 @@ line-height:44px;display:block; font-size:15px;
 	font-size:12px;
 	width: 30%;
 	padding-right: 10px;
+}
+
+.image {
+		width: 40px;
+		height: 40px;
+		position:absolute;
+		left:80%;
+		top: 2px;
 }
 
 .two_line_selection {

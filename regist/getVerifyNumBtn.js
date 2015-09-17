@@ -6,7 +6,8 @@ var VerifyNum = {
 			M._alert('请输入手机号');
 			return false;
 		}
-		time(document.getElementById("getVerifyNumBtn"));
+
+		time(document.getElementById("getVerifyNumLink"));
 
 		function time(o) {
 		if (wait === 0) {

@@ -1,14 +1,14 @@
 var basicInfo = {
 	createStudent: function() {
 		var name = $('#name').val();
-		var birthday = $('#birthday').val();
     var startReadingAge = $('#startReadingAge').val();
-
+		var parentType = $('#parentSelect').val();
+		var birthday = $('#YYYY').val()+"-"+$('#MM').val()+"-"+$('#DD').val();
     var readingCount = 0;
     var readingCountArr = document.getElementsByName("readingCount");
-    for(int i = 1; i <= readingCountArr.length; i++){
-      if (genderRadioArr[i].checked == true) {
-        readingCount = i;
+    for(var i = 0; i < readingCountArr.length; i++){
+      if (readingCountArr[i].checked == true) {
+        readingCount = i+1;
         break;
       }
     }
@@ -31,9 +31,9 @@ var basicInfo = {
 
     var gender = 0;
     var genderRadioArr = document.getElementsByName("gender");
-    for(int i = 1; i <= genderRadioArr.length; i++){
+    for(var i = 0; i < genderRadioArr.length; i++){
       if (genderRadioArr[i].checked == true) {
-        gender = i;
+        gender = i+1;
         break;
       }
     }
@@ -41,9 +41,9 @@ var basicInfo = {
     var schoolType = 0;
     var schoolTypeRadioArr = document.getElementsByName("schoolType");
 
-    for(int i = 1; i <= schoolTypeRadioArr.length; i++){
+    for(var i = 0; i < schoolTypeRadioArr.length; i++){
       if(schoolTypeRadioArr[i].checked == true) {
-        schoolType = i;
+        schoolType = i+1;
         break;
       }
     }
@@ -51,9 +51,9 @@ var basicInfo = {
     var readingHourPerWeek = 0;
     var readingHourPerWeekArr = document.getElementsByName("readingHourPerWeek");
 
-    for(int i = 1; i <= readingHourPerWeekArr.length; i++){
+    for(var i = 0; i < readingHourPerWeekArr.length; i++){
       if(readingHourPerWeekArr[i].checked == true) {
-        readingHourPerWeek = i;
+        readingHourPerWeek = i+1;
         break;
       }
     }
@@ -101,6 +101,7 @@ var basicInfo = {
 			birthday: birthday,
 			readingCount: readingCount,
       gender: gender,
+			parentType: parentType,
       startReadingAge: startReadingAge,
       nickName: nickName,
       schoolType: schoolType,

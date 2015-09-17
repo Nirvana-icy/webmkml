@@ -7,7 +7,7 @@
            var y = new Date().getFullYear();
            var year = document.getElementById("YYYY");
            year.options.length = 0;
-           for (var i = (y-12); i <= y; i++) //以今年为准，前12年
+           for (var i = (y-60); i <= y; i++) //以今年为准，前60年
                    year.options.add(new Option(" "+ i , i));
 
            //赋月份的下拉框

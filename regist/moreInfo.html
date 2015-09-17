@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	  <meta name="description" content="麦壳麦粒儿童悦读之家" />
+    <meta name="format-detection" content="telephone=no">
+	<title>填写资料</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/base.js"></script>
+	<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>
+  <script type="text/javascript" src="./datePicker.js"></script>
+  <script type="text/javascript" src="./completeRegist.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+  <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
+
+</head>
+<body>
+<form>
+<div class="head">
+	<span class="head_title">个人信息(*为必填)</span>
+</div>
+
+<div class="add_info">
+	<div class="add-row">
+		<span class="input_title">昵称</span>
+		<input name="nickName" id="nickName" class="input" type="text" value="" placeholder="选填" />
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">头像</span>
+		<img src="../image/addPhotoBtn.png" id="userImageView" class="image" onclick="return wxSelectImg.selectImage();"/>
+	</div>
+
+  <div class="add-row">
+    <span class="input_title">您的性别:</span>
+    <label class="small_input_width "><input name="gender" type="radio" value="" /> 男 </label>
+    <label class="small_input_width "><input name="gender" type="radio" value="" /> 女 </label>
+  </div>
+
+  <div class="add-row">
+    <span class="input_title">您的生日:</span>
+    <form name="datePicker">
+      <select id="YYYY" onchange="YYYYDD(this.value)">
+        <option value=""></option>
+      </select>
+      <select id="MM" onchange="MMDD(this.value)">
+        <option value=""></option>
+      </select>
+      <select id="DD">
+        <option value=""></option>
+      </select>
+    </form>
+  </div>
+
+  <div class="add-row">
+    <span class="input_title">个人简历:</span>
+    <input name="resume" id="resume" type="textarea" value="" placeholder="您的简介" />
+    <!-- <textarea name="yj" cols="20" rows="5"> -->
+  </div>
+
+  <div class="add-row">
+		<span class="input_title_red">*您所在的社区:</span>
+		<select id="communitySelect" style="width:50%">
+			<option value=亲亲家园>亲亲家园</option>
+			<option value=金地自在城>金地自在城</option>
+			<option value=阳光花园>阳光花园</option>
+		</select>
+	</div>
+
+  <div class="add-row">
+    <span class="input_title" style="color:#FF3030">*您的职业:</span>
+    <input name="career" id="career" class="input" type="text" value="" placeholder="请输入" />
+  </div>
+
+  <div class="add-row">
+	   <div class="button_ok_div">
+		     <a href="#" class="button_ok" onclick="return completeRegist.submit();">完成注册</a>
+	  </div>
+  </div>
+</div>
+</form>
+
+</body>
+</html>
