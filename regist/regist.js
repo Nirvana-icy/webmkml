@@ -27,10 +27,10 @@ var registAction = {
 			verifyNum: validNum,
 		};
 
-		$.post("http://121.41.98.144:80/mmUser/register/", param, function(e){
-			if(0 === Number(e.ret)) {
-				location.href = "/regist.html";
-			}
+		$.post("http://121.41.98.144:80/mmUser/register/", param, function(ret){
+			// if(Number(ret.id) > 0) {
+				location.href = "/profile.html";
+			// }
 		});
 		return false;
 	}

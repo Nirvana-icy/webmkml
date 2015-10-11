@@ -24,6 +24,14 @@ body {background:#fff; }
   color:#000000;
 }
 
+.head_title_center {
+	width:88%;
+	position:absolute;
+	text-align:center;
+	display:inline-block;
+  color:#000000;
+}
+
 .head_add {
   color:#999999;
   font-size:13px;
@@ -48,6 +56,14 @@ body {background:#fff; }
 .add-row {
 position:relative;
 border-bottom:1px solid #ddd;
+overflow:hidden;
+padding:0 4%;
+line-height:44px;display:block; font-size:15px;
+}
+
+.add-row-blank {
+position:relative;
+
 overflow:hidden;
 padding:0 4%;
 line-height:44px;display:block; font-size:15px;
@@ -108,6 +124,20 @@ line-height:80px;display:block; font-size:15px;
 	margin-top:10px;
 }
 
+.button_regist_small {
+	display:block;
+	height: 32px;line-height: 32px;
+	background:#FA8728;
+	border-radius:6px;
+	color:#FFFFFF;
+	position:absolute;
+	margin-top:10px;
+	width: 60px;
+	position:absolute;
+	left:78%;
+	text-align:center;
+}
+
 .head_add_input {
   font-size:13px;
   border:1px solid #FFE610;
@@ -154,12 +184,6 @@ line-height:80px;display:block; font-size:15px;
 
 .input_title {
 	width: 30%;
-  display:inline-block;margin-right:5px;
-}
-
-.input_title_red {
-	color:#FF3030;
-	width: 40%;
   display:inline-block;margin-right:5px;
 }
 

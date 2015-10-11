@@ -10,11 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
 	  <meta name="description" content="麦壳麦粒儿童悦读之家" />
     <meta name="format-detection" content="telephone=no">
-	<title>个人中心</title>
+	<title>修改资料</title>
 	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
 	<script type="text/javascript" src="../js/base.js"></script>
-  <script type="text/javascript" src="./profile.js"></script>
+  <script type="text/javascript" src="./profileModify.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../css/public.css" />
   <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
@@ -30,32 +30,32 @@
 
   <div class="add-row">
 		<span class="input_title">昵称</span>
-    <label class="user_info_input fr" id="nickName">nickName</label>
+    <input class="user_info_input" id="nickName" placeholder="nickName"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">性别</span>
-    <label class="user_info_input fr" id="gender">gender</label>
+    <input class="user_info_input" id="gender" placeholder="gender"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">手机号</span>
-    <label class="user_info_input fr" id="phoneNum">phoneNum</label>
+    <input class="user_info_input" id="phoneNum" placeholder="phoneNum"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">宝宝数量</span>
-    <label class="user_info_input fr" id="babyNum">babyNum</label>
+    <input class="user_info_input" id="babyNum" placeholder="babyNum"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">住宅小区</span>
-    <label class="user_info_input fr" id="community">community</label>
+    <input class="user_info_input" id="community" placeholder="community"></input>
 	</div>
 
   <div class="add-row">
 		<span class="input_title">职业</span>
-    <label class="user_info_input fr" id="career">career</label>
+    <input class="user_info_input" id="career" placeholder="career"></input>
 	</div>
 
   <div class="add-row">
@@ -65,7 +65,7 @@
 
   <div class="add-row">
 	   <div class="button_ok_div">
-		     <a href="../regist/profileModify.html" class="button_ok">修改资料</a>
+		     <a href="#" class="button_ok" onclick="return profile.Modify();">提交修改</a>
 	  </div>
   </div>
 </div>
