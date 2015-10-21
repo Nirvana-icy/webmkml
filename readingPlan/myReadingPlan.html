@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	<meta name="description" content="麦壳麦粒儿童悦读之家" />
+    <meta name="format-detection" content="telephone=no">
+	<title>个性化阅读方案</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/base.js"></script>
+	<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="./regist.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+  <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
+
+</head>
+<body>
+
+	<span class="title_center" style="top:50px">我要查看的阅读方案是:</span>
+  <div class="title_center" style="top:110px">
+    <span class="center_item_title">时间:</span>
+    <input id="time" type="date" />
+  </div>
+
+  <div class="title_center" style="top:160px">
+    <span class="center_item_title" style="width:25%">宝宝姓名:</span>
+    <select id="babyName" style="width:35%">
+			<option value=1>星星</option>
+			<option value=2>明明</option>
+		</select>
+  </div>
+
+  <div class="add-row" style="top:220px">
+	   <div style="button_ok_div">
+		     <a href="#" class="button_ok" style="width:100px" onclick="return newbaby.createReadingPlan();">提交</a>
+       </div>
+ </div>
+
+</body>
+</html>

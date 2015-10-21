@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	<meta name="description" content="麦壳麦粒儿童悦读之家" />
+    <meta name="format-detection" content="telephone=no">
+	<title>申请体验</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/base.js"></script>
+	<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="../js/jQuery.md5.js"></script>
+	<script type="text/javascript" src="./getVerifyNumBtn.js"></script>
+	<script type="text/javascript" src="./applyTrial.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+  <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
+
+</head>
+<body>
+<form>
+<div class="head">
+	<span class="head_title">个人信息</span>
+</div>
+
+<div class="add_info">
+	<div class="add-row">
+		<span class="input_title">手机号</span>
+		<input name="phoneNum" id="phoneNum" class="input" type="text" value="" placeholder="请输入您的手机号" />
+	</div>
+	<div class="add-row">
+		<span class="input_title">密码</span>
+		<input name="pw_1" id="pw_1" class="input" type="password" value="" placeholder="请设置六位密码" />
+	</div>
+
+  <div class="add-row">
+		<span class="input_title">确认密码</span>
+		<input name="pw_2" id="pw_2" class="input" type="password" value="" placeholder="请再次输入密码" />
+	</div>
+
+  <div class="add-row">
+		<span class="input_title">验证码</span>
+		<input name="validNum" id="validNum" class="inputSmall" type="text" value="" placeholder="请输入验证码" />
+  	<span><a href="#" class="button_ok_small verifyBtn" id="getVerifyNumLink" onclick="return VerifyNum.getVerifyNum();">发送验证码</a>
+	</div>
+
+  <div class="add-row">
+	   <div class="button_ok_div">
+		     <a href="#" class="button_ok" onclick="return applyTrial.submit();">下一步</a>
+	  </div>
+  </div>
+</div>
+</form>
+
+</body>
+</html>

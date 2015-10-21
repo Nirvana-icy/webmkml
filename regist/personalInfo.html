@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	<meta name="description" content="咖小啡" />
+    <meta name="format-detection" content="telephone=no">
+	<title>个人中心</title>
+	<script type="text/javascript" src="/Public/static/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="/Public/static/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript" src="/Public/Home/Kxf/js/base.js"></script>
+	<script type="text/javascript" src="/Public/Home/Kxf/js/jweixin-1.0.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="/Public/Home/Kxf/css/public.css?v=155" />
+	<style type="text/css">
+body {background:#fff; }
+
+.fl { float:left}
+.fr { float:right}
+
+.head {
+	height:50px;
+	line-height:50px;
+	font-size:16px;
+	color:#aaa;
+	background:#ececec;
+	padding: 0 20px;
+	border-bottom: 1px solid #aaa;
+}
+
+.head_ico {
+	float:left;
+	display:inline-block;
+	margin-top:5px;
+	width:40px; height:40px; background:url('/Public/Home/Kxf/images/user.png') no-repeat; background-size:40px 40px;
+}
+
+.head_username {
+	float:left;
+	margin-left:10px;
+	display:inline-block;
+	font-size:14px;
+}
+
+.user_info {
+	padding:0 2.5%;
+}
+
+.user_row {
+position:relative;
+border-bottom:1px solid #ddd;
+overflow:hidden;
+padding:0 4%;
+line-height:44px;display:block; font-size:15px;
+}
+
+.user_row span {
+	color: #888;
+}
+
+.arrow_right{ width:13px; height:20px; background:url('/Public/Home/Kxf/images/arrow_1.png') no-repeat; background-size:13px auto; margin-top:12.5px;}
+
+.icon_order {
+	float:left; width:30px; height:30px; background:url('/Public/Home/Kxf/images/ico_order.png') no-repeat; background-size:30px auto; margin-top:7px;margin-right:14px;
+}
+
+.ico_redpacket {
+	float:left; width:30px; height:30px; background:url('/Public/Home/Kxf/images/ico_redpacket.png') no-repeat; background-size:30px auto; margin-top:7px;margin-right:14px;
+}
+
+.ico_balance {
+	float:left; width:30px; height:30px; background:url('/Public/Home/Kxf/images/ico_balance.png') no-repeat; background-size:30px auto; margin-top:7px;margin-right:14px;
+}
+
+.ico_address {
+	float:left; width:30px; height:30px; background:url('/Public/Home/Kxf/images/ico_address2.png') no-repeat; background-size:30px auto; margin-top:7px;margin-right:14px;
+}
+
+.ico_company_tel {
+	float:left; width:30px; height:30px; background:url('/Public/Home/Kxf/images/ico_company_tel.png') no-repeat; background-size:30px auto; margin-top:7px;margin-right:14px;
+}
+
+.ico_company_email {
+	float:left; width:30px; height:30px; background:url('/Public/Home/Kxf/images/ico_company_email.png') no-repeat; background-size:30px auto; margin-top:7px;margin-right:14px;
+}
+
+.ico_company_addr {
+	float:left; width:30px; height:30px; background:url('/Public/Home/Kxf/images/ico_company_addr.png') no-repeat; background-size:30px auto; margin-top:7px;margin-right:14px;
+}
+
+
+.icon_recharge {
+	width:78px; height:32px; background:url('/Public/Home/Kxf/images/recharge.png') no-repeat; background-size:78px 32px; margin-top:8px;
+}
+
+.resetmoney_hint {
+	color:#aaa;
+	height:40px;
+	font-size:13px;
+	width:160px;
+}
+	</style>
+</head>
+<body>
+
+<div class="head">
+	<p class="head_ico"></p>
+	<span class="head_username">Nirvana.icy</span>
+	<div style="clear:both"></div>
+</div>
+
+<div class="user_info">
+	<a class="user_row" href="/KxfPersonInfo/myorder">
+		<p class="icon_order"></p>
+		<span>我的订单</span>
+		<div class="fr">
+			<p class="arrow_right"></p>
+		</div>
+	</a>
+
+	<a class="user_row" href="/KxfPersonInfo/myredpacket">
+		<p class="ico_redpacket"></p>
+		<span>我的红包</span>
+		<div class="fr">
+			<p class="arrow_right"></p>
+		</div>
+	</a>
+
+	<a class="user_row" href="/KxfPersonInfo/recharge">
+		<p class="ico_balance"></p>
+		<span>我的余额</span>
+		<span style="margin-left:8px;" class="resetmoney_hint">15.00元</span>
+		<div class="fr">
+			<p class="icon_recharge"></p>
+		</div>
+	</a>
+
+	<a class="user_row" href="/KxfBase/address_manager?order_id=0">
+		<p class="ico_address"></p>
+		<span>外送地址</span>
+		<div class="fr">
+			<p class="arrow_right"></p>
+		</div>
+	</a>
+
+	<div style="height:30px;">
+	</div>
+
+	<div class="user_row">
+		<p class="ico_company_tel"></p>
+		<span>客服电话</span>
+		<span style="margin-left:8px">4009609068</span>
+	</div>
+
+	<div class="user_row">
+		<p class="ico_company_email"></p>
+		<span>公司邮箱</span>
+		<span style="margin-left:8px">cccoffee2014@163.com</span>
+	</div>
+
+	<div class="user_row">
+		<p class="ico_company_addr"></p>
+		<span>公司地址</span>
+		<span style="margin-left:8px;">上海市黄浦区黄陂南路751号陶瓷文化产业园4号楼h220</span>
+	</div>
+
+</div>
+<script type="text/javascript">
+var Info = {
+	headimgurl: "http://wx.qlogo.cn/mmopen/TrIEr58ZoFicUBaN42AGvP9K3gPTEwrNTYWawpbOZjks39QCNjRfEBYOPbhFw8ysFBDMV7SUflm0Dn6XfNwKRWQ/0",
+
+	init: function() {
+		$('.head_ico').css('background-image','url('+Info.headimgurl+')');
+	}
+};
+Info.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+	  <meta name="description" content="麦壳麦粒儿童悦读之家" />
+    <meta name="format-detection" content="telephone=no">
+	<title>个人资料</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/base.js"></script>
+  <script type="text/javascript" src="./profileCustom.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+  <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
+
+</head>
+<body>
+<form>
+<div class="add_info">
+	<div class="add-row-hight">
+		<span class="input_title">头像</span>
+		<img src="../image/addPhotoBtn.png" id="userImageView" class="roundImage" />
+	</div>
+
+  <div class="add-row">
+		<span class="input_title">昵称</span>
+    <label class="user_info_center fr" id="nickName"></label>
+	</div>
+
+  <div class="add-row">
+		<span class="input_title">性别</span>
+    <label class="user_info_center fr" id="gender"></label>
+	</div>
+
+  <div class="add-row">
+		<span class="input_title">手机号</span>
+    <label class="user_info_center fr" id="phoneNum"></label>
+	</div>
+
+  <div class="add-row">
+		<span class="input_title">个性签名</span>
+    <label class="user_info_center fr" id="signature"></label>
+	</div>
+
+<div id="babyInfoDiv">
+  <div class="add-row">
+    <span class="input_title">阿宝的状态</span>
+    <label class="user_info_center" id="customLevel">您还未成为会员</label>
+    <span><a href="#" class="button_ok_small smallLeftBtn" id="joinMemberShipBtn" onclick="">升级</a>
+  </div>
+</div>
+
+  <div class="add-row">
+    <span class="input_title"></span>
+    <label class="user_info_center" id="customLevel"></label>
+    <span><a href="#" class="button_ok_small smallLeftBtn" id="getVerifyNumLink"  onclick="addBabyBtnTaped();">添加宝宝</a>
+  </div>
+
+  <div class="add-row">
+	   <div class="button_ok_div">
+		     <a href="../regist/profileModify.html" class="button_ok">修改资料</a>
+	  </div>
+  </div>
+</div>
+</form>
+</body>
+</html>

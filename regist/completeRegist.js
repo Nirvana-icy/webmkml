@@ -22,7 +22,7 @@ var completeRegist = {
 var complete = {
 	submit: function(serverImageId) {
 		var nickName = $('#nickName').val();
-		var birthday = $('#YYYY').val()+"-"+$('#MM').val()+"-"+$('#DD').val();
+		var birthday = $('#birthday').val();
     var gender = 0;
     var genderRadioArr = document.getElementsByName("gender");
     for(var i = 0; i < genderRadioArr.length; i++){

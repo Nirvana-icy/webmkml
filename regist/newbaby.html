@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+		<meta name="description" content="麦壳麦粒儿童悦读之家" />
+    <meta name="format-detection" content="telephone=no">
+	<title>填写资料</title>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript" src="../js/base.js"></script>
+	<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="./newbaby.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/public.css" />
+  <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
+</head>
+<body>
+<form>
+<div class="head">
+	<span class="head_title">宝宝信息</span>
+</div>
+
+<div class="add_info">
+	<div class="add-row">
+		<span class="input_title">宝宝姓名:</span>
+		<input name="name" id="name" class="input" type="text" value="" placeholder="请填写宝宝的姓名" />
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">宝宝生日:</span>
+		<input id="birthday" type="date" class="common_ipunt_width"/>
+	</div>
+
+  <div class="add-row">
+		<span class="input_title">宝宝性别:</span>
+		<label class="small_input_width "><input name="gender" type="radio" value="" /> 男 </label>
+		<label class="small_input_width "><input name="gender" type="radio" value="" /> 女 </label>
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">宝宝小名:</span>
+		<input name="nickName" id="nickName" class="input" type="text" value="" placeholder="星星" />
+	</div>
+
+	<div class="add-row">
+		<span class="input_title">我是孩子的:</span>
+		<select id="parentSelect" class="common_ipunt_width">
+			<option value=2>妈妈</option>
+			<option value=1>爸爸</option>
+		</select>
+	</div>
+
+  <div class="add-row">
+	   <div class="button_ok_div">
+		     <a href="#" class="button_ok" onclick="return newbaby.createReadingPlan();">直接生成孩子的阅读方案</a>
+				 
+				 <a href="#" class="button_ok" onclick="return newbaby.inputMoreInfo();">继续完善注册资料</a>
+	  </div>
+  </div>
+</div>
+</form>
+
+</body>
+</html>

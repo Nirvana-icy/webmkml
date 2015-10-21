@@ -15,7 +15,6 @@
 	<script type="text/javascript" src="../js/jquery.cookies.2.2.0.min.js"></script>
 	<script type="text/javascript" src="../js/base.js"></script>
 	<script type="text/javascript" src="../js/jweixin-1.0.0.js"></script>
-  <script type="text/javascript" src="./datePicker.js"></script>
   <script type="text/javascript" src="./completeRegist.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/public.css" />
   <link rel="stylesheet" type="text/css" href="../css/basicInfo.css" />
@@ -46,17 +45,7 @@
 
   <div class="add-row">
     <span class="input_title">您的生日:</span>
-    <form name="datePicker">
-      <select id="YYYY" style="margin-right:10px" onchange="YYYYDD(this.value)">
-        <option value=""></option>
-      </select>
-      <select id="MM" style="margin-right:10px" onchange="MMDD(this.value)">
-        <option value=""></option>
-      </select>
-      <select id="DD" style="margin-right:10px">
-        <option value=""></option>
-      </select>
-    </form>
+		<input id="birthday" type="date" />
   </div>
 
   <div class="add-row">
