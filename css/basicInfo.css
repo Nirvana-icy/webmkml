@@ -268,6 +268,14 @@ line-height:80px;display:block; font-size:15px;
 		text-align:center;
 }
 
+.smallLeftBtn {
+		width: 80px;
+		position:absolute;
+		left:65%;
+		top: -3px;
+		text-align:center;
+}
+
 .two_line_selection {
 	font-size:12px;
 	width: 100px;
