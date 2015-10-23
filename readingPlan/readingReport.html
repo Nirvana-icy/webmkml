@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的生活</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/sui-mobile/sm/0.5.0/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/sui-mobile/sm/0.5.0/css/sm-extend.min.css">
+
+    <link rel="stylesheet" href="../css/public.css">
+  </head>
+  <body>
+    <!-- 你的html代码 -->
+    <div class="page" id='readingReportPage'>
+
+      <nav class="bar bar-tab">
+          <span class="tab-label"><a href="#" class="button button-fill">提交</a></span>
+      </nav>
+
+      <div class="content">
+        <div class="buttons-tab">
+          <a href="#tab1" class="tab-link active button">观察记录表</a>
+          <a href="#tab2" class="tab-link button">成长记录</a>
+        </div>
+
+
+  <div class="content-block">
+    <div class="tabs">
+      <div id="readingRecordTab" class="tab active">
+        <div class="content-block">
+
+          <div class="list-block">
+          <ul>
+            <!-- 专注时间 -->
+            <li>
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-clock"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">专注时间</div>
+                    <div class="item-input"><input type="text" id='focusTime'></div>
+                    <div class="item-after">分钟</div>
+                  </div>
+              </div>
+            </li>
+            <!-- 阅读状态 -->
+            <li>
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-right"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">阅读状态</div>
+                        <div class="item-input">
+                          <select id='readingStatus'>
+                            <option value="1">专注</option>
+                            <option value="2">不专注</option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+              </li>
+              <!-- 阅读反应 -->
+            <li>
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-caret"></i></div>
+                <div class="item-inner">
+                  <div class="item-title label">阅读反应</div>
+                </div>
+              </div>
+            </li>
+            <!-- 口语反应 -->
+            <li>
+              <div class="item-content">
+                <div class="item-media"><i class="icon icon-right"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">口语反应</div>
+                        <div class="item-input"><input type="text" id='oralStatus'></div>
+                      </div>
+                  </div>
+              </li>
+              <!-- 面部表情 -->
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-right"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title label">面部表情</div>
+                          <div class="item-input"><input type="text" id='faceStatus'></div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 情感表达 -->
+                <li>
+                  <div class="item-content">
+                    <div class="item-media"><i class="icon icon-right"></i></div>
+                          <div class="item-inner">
+                            <div class="item-title label">情感表达</div>
+                            <div class="item-input"><input type="text" id='emotionStatus'></div>
+                          </div>
+                      </div>
+                  </li>
+                  <!-- 肢体动作 -->
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-right"></i></div>
+                            <div class="item-inner">
+                              <div class="item-title label">肢体动作</div>
+                              <div class="item-input"><input type="text" id='bodyStatus'></div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 活动状态 -->
+                    <li>
+                      <div class="item-content">
+                        <div class="item-media"><i class="icon icon-right"></i></div>
+                              <div class="item-inner">
+                                <div class="item-title label">活动状态</div>
+                                <div class="item-input">
+                                  <select id='activityStatus'>
+                                    <option value="1">积极参与</option>
+                                    <option value="2">不专注</option>
+                                  </select>
+                                </div>
+                              </div>
+                          </div>
+                      </li>
+                      <!-- 遇到困难 -->
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media"><i class="icon icon-right"></i></div>
+                                <div class="item-inner">
+                                  <div class="item-title label">遇到困难</div>
+                                  <div class="item-input">
+                                    <select id='howToDealDifficult'>
+                                      <option value="1">尝试解决</option>
+                                      <option value="2">旁观</option>
+                                    </select>
+                                  </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 有矛盾吗 -->
+                        <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon icon-right"></i></div>
+                                  <div class="item-inner">
+                                    <div class="item-title label">有矛盾吗</div>
+                                    <div class="item-input">
+                                      <select id='conflictStatus'>
+                                        <option value="1">情绪化</option>
+                                        <option value="2">良好</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                              </div>
+                          </li>
+                      <!-- 合作分享 -->
+                      <li>
+                        <div class="item-content">
+                          <div class="item-media"><i class="icon icon-right"></i></div>
+                                <div class="item-inner">
+                                  <div class="item-title label">合作分享</div>
+                                  <div class="item-input">
+                                    <select id='isCooperate'>
+                                      <option value="1">是</option>
+                                      <option value="0">不是</option>
+                                    </select>
+                                  </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 协助老师收拾教具 -->
+                        <li>
+                          <div class="item-content">
+                            <div class="item-media"><i class="icon icon-right"></i></div>
+                                  <div class="item-inner">
+                                    <div class="item-title label">协助老师收拾教具</div>
+                                    <div class="item-input">
+                                      <select id='isHelpTeacher'>
+                                        <option value="1">是</option>
+                                        <option value="0">不是</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                              </div>
+                          </li>
+                          <!-- 爸爸接送 -->
+                          <li>
+                            <div class="item-content">
+                              <div class="item-media"><i class="icon icon-right"></i></div>
+                                    <div class="item-inner">
+                                      <div class="item-title label">爸爸接送</div>
+                                      <div class="item-input">
+                                        <select id='isDadyCare'>
+                                          <option value="1">是</option>
+                                          <option value="0">不是</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- 备注 -->
+                            <li>
+                              <div class="item-content">
+                                <div class="item-media"><i class="icon icon-edit"></i></div>
+                                  <div class="item-inner">
+                                    <div class="item-title label">备注</div>
+                                    <div class="item-input"><input type="text" id='memo'></div>
+                                  </div>
+                              </div>
+                            </li>
+          </ul>
+          </div>
+
+
+        </div>
+      </div>
+      <div id="tab2" class="tab">
+        <div class="content-block">
+          <p>This is tab 2 content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- 你的html代码 -->
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/sui-mobile/sm/0.5.0/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/sui-mobile/sm/0.5.0/js/sm-extend.min.js' charset='utf-8'></script>
+
+    <script type="text/javascript" src="./readingReport.js"></script>
+  </body>
+</html>
