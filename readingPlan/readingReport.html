@@ -88,7 +88,7 @@
                 <div class="item-media"><i class="icon icon-right"></i></div>
                       <div class="item-inner">
                         <div class="item-title label">口语反应</div>
-                        <div class="item-input"><input type="text" id='oralStatus'></div>
+                        <div class="item-input"><input type="text" id='oralStatus' placeholder="&nbsp&nbsp&nbsp&nbsp请填写"></div>
                       </div>
                   </div>
               </li>
@@ -98,7 +98,7 @@
                   <div class="item-media"><i class="icon icon-right"></i></div>
                         <div class="item-inner">
                           <div class="item-title label">面部表情</div>
-                          <div class="item-input"><input type="text" id='faceStatus'></div>
+                          <div class="item-input"><input type="text" id='faceStatus' placeholder="&nbsp&nbsp&nbsp&nbsp请填写"></div>
                         </div>
                     </div>
                 </li>
@@ -108,7 +108,7 @@
                     <div class="item-media"><i class="icon icon-right"></i></div>
                           <div class="item-inner">
                             <div class="item-title label">情感表达</div>
-                            <div class="item-input"><input type="text" id='emotionStatus'></div>
+                            <div class="item-input"><input type="text" id='emotionStatus' placeholder="&nbsp&nbsp&nbsp&nbsp请填写"></div>
                           </div>
                       </div>
                   </li>
@@ -118,7 +118,7 @@
                       <div class="item-media"><i class="icon icon-right"></i></div>
                             <div class="item-inner">
                               <div class="item-title label">肢体动作</div>
-                              <div class="item-input"><input type="text" id='bodyStatus'></div>
+                              <div class="item-input"><input type="text" id='bodyStatus' placeholder="&nbsp&nbsp&nbsp&nbsp请填写"></div>
                             </div>
                         </div>
                     </li>
@@ -218,7 +218,7 @@
                                 <div class="item-media"><i class="icon icon-edit"></i></div>
                                   <div class="item-inner">
                                     <div class="item-title label" style="width:60px">备注</div>
-                                    <div class="item-input margin_left"><textarea type="text" id='memo'></textarea></div>
+                                    <div class="item-input margin_left"><textarea type="text" id='memo' placeholder="选填"></textarea></div>
                                   </div>
                               </div>
                             </li>
@@ -226,7 +226,57 @@
           </div>
       </div>
       <div id="tabB" class="tab">
-          <p>This is tab 2 content</p>
+        <div class="list-block">
+          <ul>
+            <!-- 宝宝姓名 -->
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label" style="width:150px">闪亮宝宝</div>
+                  <div class="item-input">
+                    <input type="text" placeholder="请选择宝宝" id="studentPicker" readonly="">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- 老师的评语 -->
+            <li class="align-top">
+              <div class="content-title">&nbsp&nbsp&nbsp陪伴老师的三言两语</div>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input margin_left"><textarea type="text" id='teacherComment' placeholder="请填写"></textarea></div>
+                </div>
+              </div>
+            </li>
+            <!-- 囧言囧语 -->
+            <li class="align-top">
+              <div class="content-title">&nbsp&nbsp&nbsp囧言囧语</div>
+              <div class="item-content">
+                <div class="item-inner"><div class="item-input margin_left"><input type="text" id='babySaying' placeholder="选填"></input></div></div>
+              </div>
+            </li>
+            <!-- 今日优选绘本 -->
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title label" style="width:150px">今日优选绘本</div>
+                  <div class="item-input">
+                    <input type="text" placeholder="请选择推荐绘本" id="bookPicker" readonly="">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- 亲子悦读时光 -->
+            <li class="align-top">
+              <div class="content-title">&nbsp&nbsp&nbsp亲子悦读时光(教案中的'亲子阅读指导')</div>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input margin_left"><textarea type="text" id='readingGuide' placeholder="请填写"></textarea></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
 
     </div>
