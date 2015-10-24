@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>我的生活</title>
+    <title>课后评估-独立课</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -11,37 +11,34 @@
     <link rel="stylesheet" href="//g.alicdn.com/sui-mobile/sm/0.5.0/css/sm.min.css">
     <link rel="stylesheet" href="//g.alicdn.com/sui-mobile/sm/0.5.0/css/sm-extend.min.css">
 
-    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/customSUI.css">
+    <!-- <link rel="stylesheet" href="../css/basicInfo.css"> -->
   </head>
   <body>
     <!-- 你的html代码  -->
     <div class="page" id='readingReportPage'>
 
       <nav class="bar bar-tab">
-          <span class="tab-label"><a href="#" class="button button-fill">提交</a></span>
+          <span class="tab-label"><a href="#" class="button button-fill button_ok">提交</a></span>
       </nav>
 
-      <div class="content">
+    <div class="content">
         <div class="buttons-tab">
-          <a href="#tab1" class="tab-link active button">观察记录表</a>
-          <a href="#tab2" class="tab-link button">成长记录</a>
+          <a href="#tabA" class="tab-link active button">观察记录表</a>
+          <a href="#tabB" class="tab-link button">成长记录</a>
         </div>
 
-
-  <div class="content-block">
     <div class="tabs">
-      <div id="readingRecordTab" class="tab active">
-        <div class="content-block">
-
+      <div id="tabA" class="tab active">
           <div class="list-block">
-          <ul>
+            <ul>
             <!-- 专注时间 -->
             <li>
               <div class="item-content">
                 <div class="item-media"><i class="icon icon-clock"></i></div>
                   <div class="item-inner">
                     <div class="item-title label">专注时间</div>
-                    <div class="item-input"><input type="text" id='focusTime'></div>
+                    <div class="item-input margin_left"><input type="text" id='focusTime'></div>
                     <div class="item-after">分钟</div>
                   </div>
               </div>
@@ -52,7 +49,7 @@
                 <div class="item-media"><i class="icon icon-right"></i></div>
                       <div class="item-inner">
                         <div class="item-title label">阅读状态</div>
-                        <div class="item-input">
+                        <div class="item-input margin_left">
                           <select id='readingStatus'>
                             <option value="1">专注</option>
                             <option value="2">不专注</option>
@@ -116,7 +113,7 @@
                         <div class="item-media"><i class="icon icon-right"></i></div>
                               <div class="item-inner">
                                 <div class="item-title label">活动状态</div>
-                                <div class="item-input">
+                                <div class="item-input margin_left">
                                   <select id='activityStatus'>
                                     <option value="1">积极参与</option>
                                     <option value="2">不专注</option>
@@ -131,7 +128,7 @@
                           <div class="item-media"><i class="icon icon-right"></i></div>
                                 <div class="item-inner">
                                   <div class="item-title label">遇到困难</div>
-                                  <div class="item-input">
+                                  <div class="item-input margin_left">
                                     <select id='howToDealDifficult'>
                                       <option value="1">尝试解决</option>
                                       <option value="2">旁观</option>
@@ -146,7 +143,7 @@
                             <div class="item-media"><i class="icon icon-right"></i></div>
                                   <div class="item-inner">
                                     <div class="item-title label">有矛盾吗</div>
-                                    <div class="item-input">
+                                    <div class="item-input margin_left">
                                       <select id='conflictStatus'>
                                         <option value="1">情绪化</option>
                                         <option value="2">良好</option>
@@ -161,7 +158,7 @@
                           <div class="item-media"><i class="icon icon-right"></i></div>
                                 <div class="item-inner">
                                   <div class="item-title label">合作分享</div>
-                                  <div class="item-input">
+                                  <div class="item-input margin_left">
                                     <select id='isCooperate'>
                                       <option value="1">是</option>
                                       <option value="0">不是</option>
@@ -175,8 +172,8 @@
                           <div class="item-content">
                             <div class="item-media"><i class="icon icon-right"></i></div>
                                   <div class="item-inner">
-                                    <div class="item-title label">协助老师收拾教具</div>
-                                    <div class="item-input">
+                                    <div class="item-title label" style="width:150px">协助老师收拾教具</div>
+                                    <div class="item-input margin_left">
                                       <select id='isHelpTeacher'>
                                         <option value="1">是</option>
                                         <option value="0">不是</option>
@@ -191,7 +188,7 @@
                               <div class="item-media"><i class="icon icon-right"></i></div>
                                     <div class="item-inner">
                                       <div class="item-title label">爸爸接送</div>
-                                      <div class="item-input">
+                                      <div class="item-input margin_left">
                                         <select id='isDadyCare'>
                                           <option value="1">是</option>
                                           <option value="0">不是</option>
@@ -201,30 +198,27 @@
                                 </div>
                             </li>
                             <!-- 备注 -->
-                            <li>
+                            <li class="align-top">
                               <div class="item-content">
                                 <div class="item-media"><i class="icon icon-edit"></i></div>
                                   <div class="item-inner">
-                                    <div class="item-title label">备注</div>
-                                    <div class="item-input"><input type="text" id='memo'></div>
+                                    <div class="item-title label" style="width:60px">备注</div>
+                                    <div class="item-input margin_left"><textarea type="text" id='memo'></textarea></div>
                                   </div>
                               </div>
                             </li>
           </ul>
           </div>
-
-
-        </div>
       </div>
-      <div id="tab2" class="tab">
-        <div class="content-block">
+      <div id="tabB" class="tab">
           <p>This is tab 2 content</p>
-        </div>
       </div>
+
     </div>
+
   </div>
-</div>
-</div>
+
+  </div>
 
     <!-- 你的html代码 -->
     <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
